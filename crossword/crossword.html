@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nauka na Spitsbergenie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="crossword_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <h1 class="page-title">Nauka na Spitsbergenie</h1>
+    <div class="text-input-container">
+        <label for="answer-input" class="input-label">Aby zdobyć punkty, wpisz, co pojawiło się po rozwiązaniu krzyżówki:</label>
+        <input type="text" id="answer-input" class="form-control" placeholder="Wpisz odpowiedź...">
+        <br>
+        <button class="btn btn-primary" onclick="checkAnswer()">Sprawdź</button>
+    </div>
+    <div id="result" class="text-center"></div>
+    <iframe frameborder="0" src="https://crosswordlabs.com/embed/nauka-na-spitsbergenie"></iframe>
+    <a class="back-to-home" href="../index.html"><i class="fa fa-home"></i></a>
+
+    <script src="crossword_script.js"></script>
+</body>
+</html>

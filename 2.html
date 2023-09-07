@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arktyczne zagadki</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="video_quiz_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+
+<div class="container" style="background-color: white; border-radius: 10px; margin-top: 50px; padding: 20px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Etap <span id="stage_number">1</span></h1>
+        </div>
+    </div>
+    <form onsubmit="return false">
+        <div class="form-group">
+            <label for="password_guess">Hasło:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="password_guess" name="password_guess"
+                       placeholder="Podaj hasło">
+                <span class="input-group-btn">
+                    <button id="submit_guess" class="btn btn-default" type="submit" onclick="submitAnswer()">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </form>
+    <div><p id="question" style="text-align: center;"></p></div>
+
+    <!-- Dodaj niewidoczny przycisk i informację o poprawnej odpowiedzi -->
+    <div id="wrong_answer" style="display: none;">
+        <p id="wrong_answer_message" class="text-center" style="color: red;">Zła odpowiedź.</p>
+    </div>
+    <div id="next_stage" style="display: none;">
+        <button id="next_button" class="btn btn-success btn-block" onclick="goToNextStage()">Przejdź do następnego etapu</button>
+        <p id="correct_answer" class="text-center" style="color: green;">Poprawna odpowiedź!</p>
+    </div>
+</div>
+
+<br>
+
+<div id="map"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([78.8232, 19.7267], 5);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(map);
+
+        L.marker([78.22269982973553, 15.62998021952702]).addTo(map)
+            .bindPopup('Longyearbyen - tu mieszka najwięcej ludzi')
+
+        L.marker([78.06481695602366, 14.230721810440256]).addTo(map)
+            .bindPopup('Barentsburg tu mieszkają rosjanie');
+
+        L.marker([78.65597533623, 16.34636025146904]).addTo(map)
+            .bindPopup('Pyramiden - tu mieszkali rosjanie');
+
+        L.marker([77.00616610287548, 15.537219518728637]).addTo(map)
+            .bindPopup('Hornsund - polska stacja naukowa');
+
+    </script>
+
+<script src="video_quiz_script.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

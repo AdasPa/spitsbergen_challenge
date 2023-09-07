@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gra Spitsbergenowa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Gra Spitsbergenowa</h1>
+
+        <div class="game-tiles">
+            <a href="video_quiz/video_quiz.html" class="text-decoration-none">
+                <div class="game-tile">
+                    <h2>Minigra z filmikami</h2>
+                    <p>Wpisuj hasła aby odblokować kolejne etapy.</p>
+                </div>
+            </a>
+            <a href="crossword/crossword.html" class="text-decoration-none">
+                <div class="game-tile">
+                    <h2>Krzyżówka</h2>
+                    <p>Rozwiąż krzyżówkę.</p>
+                </div>
+            </a>
+            <a href="match/match.html" class="text-decoration-none">
+                <div class="game-tile">
+                    <h2>Dopasowywanka</h2>
+                    <p>Dopasuj nazwy do obrazków.</p>
+                </div>
+            </a>
+            <a href="map/map.html" class="text-decoration-none">
+                <div class="game-tile">
+                    <h2>Mapa</h2>
+                    <p>Zdobądź informacje z mapy aby odpowiedzieć na pytania.</p>
+                </div>
+            </a>
+            <a href="animals/animals.html" class="text-decoration-none">
+                <div class="game-tile">
+                    <h2>Zwierzęta</h2>
+                    <p>Dopasuj nazwy do obrazków.</p>
+                </div>
+            </a>
+            <a href="minigra6.html" class="text-decoration-none">
+                <div class="game-tile">
+                    <h2>Minigra 6</h2>
+                    <p>Opis minigry 6</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+        <div class="game-tile info-tile" onclick="toggleInfoSection()">
+            <h2>info</h2>
+            <i class="fa fa-info-circle"></i>
+        </div>
+    <div id="info-section" class="info-section">
+        <h2>Informacje o projekcie</h2>
+        <p>Ta gra została stworzona przez zespół studentów w ramach projektu Spitsbergen Challenge. Działa na zasadzie gier typu "escape room", w których musisz rozwiązać różne zagadki i mini-gry, aby przejść do kolejnych etapów.</p>
+        <h2>Autorzy</h2>
+        <ul>
+            <li>Adam Pacek</li>
+            <li>Imię Nazwisko</li>
+            <li>Imię Nazwisko</li>
+        </ul>
+        <a class="back-to-home" href="../index.html"><i class="fa fa-home"></i></a>
+    </div>
+
+    <div class="game-counter">
+        <span id="game-counter">0</span>/6
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

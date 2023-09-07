@@ -1,0 +1,91 @@
+body {
+    background-color: #f1f1f1;
+    text-align: center;
+    background-image: url(../crossword/crossword_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.plant-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plant-name-select {
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.help-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: linear-gradient(to right, #337ab7, #23527c);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #23527c;
+}
+
+
+.plant-img {
+    width: 100%;
+    margin: auto;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .col-md-6 {
+        width: 45%;
+        float: left;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+

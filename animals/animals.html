@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arktyczne zagadki</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="animals_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="animals_script.js"></script>
+</head>
+    <body>
+
+        <div class="container" style="background-color: #f0f0f0; border-radius: 10px; margin-top: 50px; padding: 20px;">
+            <h1 class="text-center">Dopasowywanka</h1>
+            
+            <a class="help-link" href="https://www.svalbardflora.no/" target="_blank">Strona o roślinach Svalbardu</a>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="plant-card">
+                        <img class="plant-img" src="photos/bistorta.JPG" alt="Roślina 1">
+                        <select class="plant-name-select" id="bistorta">
+                            <option value="" disabled selected>Wybierz nazwę</option>
+                            <option value="bistorta">Bistorta</option>
+                            <option value="saxifraga">Saxifraga</option>
+                            <option value="potentilla">Potentilla</option>
+                            <option value="eriophorum">Eriophorum</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="plant-card">
+                        <img class="plant-img" src="photos/potentilla.jpg" alt="Roślina 2">
+                        <select class="plant-name-select" id="potentilla">
+                            <option value="" disabled selected>Wybierz nazwę</option>
+                            <option value="bistorta">Bistorta</option>
+                            <option value="saxifraga">Saxifraga</option>
+                            <option value="potentilla">Potentilla</option>
+                            <option value="eriophorum">Eriophorum</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="plant-card">
+                        <img class="plant-img" src="photos/eriophorum.jpg" alt="Roślina 1">
+                        <select class="plant-name-select" id="eriophorum">
+                            <option value="" disabled selected>Wybierz nazwę</option>
+                            <option value="bistorta">Bistorta</option>
+                            <option value="saxifraga">Saxifraga</option>
+                            <option value="potentilla">Potentilla</option>
+                            <option value="eriophorum">Eriophorum</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="plant-card">
+                        <img class="plant-img" src="photos/saxifraga.jpg" alt="Roślina 2">
+                        <select class="plant-name-select" id="saxifraga">
+                            <option value="" disabled selected>Wybierz nazwę</option>
+                            <option value="bistorta">Bistorta</option>
+                            <option value="saxifraga">Saxifraga</option>
+                            <option value="potentilla">Potentilla</option>
+                            <option value="eriophorum">Eriophorum</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <a class="back-to-home" href="../index.html"><i class="fa fa-home"></i></a>
+            <button class="submit-button" onclick="checkAnswers()">Prześlij odpowiedzi</button>
+        </div>
+    </body>
+</html>

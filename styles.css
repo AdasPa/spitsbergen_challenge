@@ -1,0 +1,127 @@
+body {
+    background-image: url(background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 50px;
+}
+
+
+.game-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.game-tile {
+    background-color: #f1f1f1;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.game-tile:hover {
+    transform: scale(1.05);
+}
+
+.game-tile h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-tile p {
+    font-size: 16px;
+}
+
+.info-section {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+    
+.info-section.show {
+    display: block;
+    }
+    
+.info-section h2 {
+    margin-bottom: 10px;
+    }
+    
+.info-section p {
+    margin-bottom: 15px;
+    }
+    
+.info-section ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    }
+    
+.info-section li {
+    margin-bottom: 5px;
+    }
+    
+.info-tile {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 9999;
+    }
+    
+.info-tile i {
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s ease;
+    }
+    
+.info-tile:hover {
+    background-color: #dcdcdc;
+    }
+    
+.info-tile:hover i {
+    color: #333;
+    }
+
+.game-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #337ab7;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.game-counter p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.game-counter span {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius: 5px;
+}
+    
