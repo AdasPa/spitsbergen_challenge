@@ -99,6 +99,7 @@ function goToNextStage() {
         document.getElementById("correct_answer").style.display = "none";
     } else {
         alert("Gratulacje! Skończyłeś wszystkie etapy.");
+        markMiniGameAsComplete(2);
         window.location.href = "../index.html";
     }
 }

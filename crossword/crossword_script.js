@@ -9,6 +9,7 @@ function checkAnswer() {
         resultElement.innerHTML = '<i class="fa fa-star animated tada"></i> Odpowiedź jest poprawna!';
         resultElement.style.color = "green";
         alert("Gratulacje, odpowiedź jest poprawna!");
+        markMiniGameAsComplete(1);
         window.location.href = "../index.html";
     } else {
         resultElement.innerHTML = 'Odpowiedź jest niepoprawna.';

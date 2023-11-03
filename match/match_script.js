@@ -18,6 +18,7 @@ function checkAnswers() {
   
     if (allCorrect) {
       alert("Gratulacje, wszystkie odpowiedzi są poprawne!");
+      markMiniGameAsComplete(3);
       window.location.href = "../index.html";
     } else {
       alert("Przynajmniej jedna odpowiedź jest niepoprawna. Spróbuj ponownie.");

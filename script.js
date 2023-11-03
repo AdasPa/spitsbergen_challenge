@@ -3,20 +3,22 @@ function toggleInfoSection() {
     infoSection.classList.toggle("show");
 }
 
-// Pobranie aktualnej wartości licznika z Local Storage
-var gameCounter = parseInt(localStorage.getItem("gameCounter")) || 0;
+if (!localStorage.miniGamesStatus) {
+    localStorage.miniGamesStatus = JSON.stringify([false, false, false, false, false, false]);
+  }
+
+
+
+const miniGamesStatus = JSON.parse(localStorage.miniGamesStatus);
+
+// Funkcja, która zlicza ilość wartości true w tablicy
+const countTrueValues = (array) => array.reduce((count, value) => count + (value === true ? 1 : 0), 0);
+
 
 // Aktualizacja wyświetlanego licznika na stronie
 var gameCounterElement = document.getElementById("game-counter");
-gameCounterElement.textContent = gameCounter;
 
-// Zwiększenie licznika i zapisanie go w Local Storage po kliknięciu w dowolną grę
-var gameTiles = document.querySelectorAll(".game-tile");
-gameTiles.forEach(function(tile) {
-    tile.addEventListener("click", function() {
-        if(gameCounter < 6)
-            gameCounter++;
-        localStorage.setItem("gameCounter", gameCounter);
-        gameCounterElement.textContent = gameCounter;
-    });
-});
+// Wywołaj funkcję, aby uzyskać ilość wartości true w tablicy
+const gameCounter = countTrueValues(miniGamesStatus);
+localStorage.setItem("gameCounter", gameCounter);
+gameCounterElement.textContent = gameCounter;
