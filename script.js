@@ -14,7 +14,8 @@ gameCounterElement.textContent = gameCounter;
 var gameTiles = document.querySelectorAll(".game-tile");
 gameTiles.forEach(function(tile) {
     tile.addEventListener("click", function() {
-        gameCounter++;
+        if(gameCounter < 6)
+            gameCounter++;
         localStorage.setItem("gameCounter", gameCounter);
         gameCounterElement.textContent = gameCounter;
     });
