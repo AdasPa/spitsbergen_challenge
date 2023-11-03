@@ -1,11 +1,13 @@
 function checkAnswers() {
-    var plant1 = document.getElementById("bistorta").value;
-    var plant2 = document.getElementById("potentilla").value;
-    var plant3 = document.getElementById("eriophorum").value;
-    var plant4 = document.getElementById("saxifraga").value;
-  
-    var correctAnswers = ["bistorta", "potentilla", "eriophorum", "saxifraga"];
-    var userAnswers = [plant1, plant2, plant3, plant4];
+    var animal1 = document.getElementById("puffin").value;
+    var animal2 = document.getElementById("ptarmigan").value;
+    var animal3 = document.getElementById("bear").value;
+    var animal4 = document.getElementById("fox").value;
+    var animal5 = document.getElementById("seal").value;
+    var animal6 = document.getElementById("reindeer").value;
+
+    var correctAnswers = ["puffin", "ptarmigan", "bear", "fox", "seal", "reindeer"];
+    var userAnswers = [animal1, animal2, animal3, animal4, animal5, animal6];
   
     var allCorrect = true;
   
