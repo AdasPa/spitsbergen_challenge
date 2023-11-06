@@ -3,34 +3,35 @@ var stages = [
     {
         question: "Podaj nazwę archipelagu o którym jest film.",
         youtubeLink: "https://www.youtube.com/embed/MKeIx4wVjIg",
-        password: "svalbard"
+        passwords: ["svalbard", "essa"]
     },
     {
         question: "Podaj nazwę miasta w którym ląduje samolot.",
         youtubeLink: "https://www.youtube.com/embed/CvBKs8ts7i0",
-        password: "longyearbyen"
+        passwords: ["longyearbyen"]
     },
     {
         question: "Jak nazywa się polska stacja badawcza na południowym Spitsbergenie?",
         youtubeLink: "https://www.youtube.com/embed/6Wjo_vOG0GI",
-        password: "hornsund"
+        passwords: ["hornsund"]
     },
     {
         question: "Co jest przechowywane w banku o którym jest film?",
         youtubeLink: "https://www.youtube.com/embed/2_OEsf-1qgY",
-        password: "nasiona"
+        passwords: ["nasiona"]
     },
     {
         question: "Jak nazywa się roślina, która kwitnie na fioletowo wczesną wiosną na Spitsbergenie?",
         youtubeLink: "https://www.youtube.com/embed/AQSSzam7kvs",
-        password: "saxifraga"
+        passwords: ["saxifraga"]
     },
     {
         question: "Jak nazywa się żona Shreka?",
         youtubeLink: "https://www.youtube.com/embed/1F_MIsbhCXg",
-        password: "fiona"
+        passwords: ["fiona"]
     }
 ];
+
 
 var currentStage = 0;
 
@@ -46,7 +47,15 @@ function loadStageContent(stageIndex) {
     document.getElementById("question").textContent = stages[stageIndex].question;
 }
 
-
+function isCorrectAnswer(guess, passwords) {
+    // Check if the guess is included in the list of passwords
+    for (var i = 0; i < passwords.length; i++) {
+        if (guess === passwords[i]) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function submitAnswer() {
 
@@ -54,7 +63,7 @@ function submitAnswer() {
     passwordGuess = passwordGuess.toLowerCase();
 
     // Check if the password guess is correct
-    if (passwordGuess === stages[currentStage].password) {
+    if (isCorrectAnswer(passwordGuess, stages[currentStage].passwords)) {
         // Show the next stage button and correct answer message
         document.getElementById("wrong_answer").style.display = "none";
         document.getElementById("next_stage").style.display = "block";

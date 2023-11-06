@@ -32,27 +32,27 @@ L.marker([78.92512999072362, 11.924791710116207]).addTo(map)
 var stages = [
     {
         question: "Jak nazywa się największa rosyjska osada na Svalbardzie?",
-        password: "barentsburg"
+        passwords: ["barentsburg"]
     },
     {
         question: "Jak nazywa się opustoszałe miasto górnicze na Spitsbergenie, które było kiedyś zamieszkane przez Rosjan?",
-        password: "pyramiden"
+        passwords: ["pyramiden"]
     },
     {
         question: "Jak nazywa się polska stacja badawcza na południowym Spitsbergenie?",
-        password: "hornsund"
+        passwords: ["hornsund"]
     },
     {
         question: "Co jest przechowywane w globalnym banku na Spitsbergenie?",
-        password: "nasiona"
+        passwords: ["nasiona"]
     },
     {
         question: "Obok jakiej zatoki będziemy prowadzić badania?",
-        password: "eidembukta"
+        passwords: ["eidembukta"]
     },
     {
         question: "Jak nazywa się najdalej wysunięta na północ osada na świecie?",
-        password: "ny alesund"
+        passwords: ["ny alesund", "ny-alesund", "ny ålesund", "ny-ålesund"]
     }
 ];
 
@@ -68,6 +68,15 @@ function loadStageContent(stageIndex) {
     document.getElementById("question").textContent = stages[stageIndex].question;
 }
 
+function isCorrectAnswer(guess, passwords) {
+    // Check if the guess is included in the list of passwords
+    for (var i = 0; i < passwords.length; i++) {
+        if (guess === passwords[i]) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function submitAnswer() {
 
@@ -75,7 +84,7 @@ function submitAnswer() {
     passwordGuess = passwordGuess.toLowerCase();
 
     // Check if the password guess is correct
-    if (passwordGuess === stages[currentStage].password) {
+    if (isCorrectAnswer(passwordGuess, stages[currentStage].passwords)) {
         // Show the next stage button and correct answer message
         document.getElementById("wrong_answer").style.display = "none";
         document.getElementById("next_stage").style.display = "block";
